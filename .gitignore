@@ -1,0 +1,4 @@
+node_modules
+.DS_Store
+voices/*.mp3
+config/default.json
