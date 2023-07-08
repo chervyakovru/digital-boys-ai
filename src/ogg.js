@@ -30,8 +30,7 @@ class OggConverter {
                     .run()
             })
         } catch (error) {
-            console.log('Error while creating Mp3: ', error);
-
+            console.log('Error while creating Mp3: ', error.message);
         }
     }
 
@@ -51,7 +50,7 @@ class OggConverter {
                 })
             })
         } catch (error) {
-            console.log('Error while creating ogg: ', error);
+            console.log('Error while creating ogg: ', error.message);
         }
 
     }
