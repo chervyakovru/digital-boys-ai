@@ -1,5 +1,7 @@
 import { Configuration, OpenAIApi } from "openai";
 import config from 'config';
+import { createReadStream } from "fs";
+
 
 class OpenAI {
     constructor(apiKey) {
@@ -11,9 +13,13 @@ class OpenAI {
 
     chat() { }
 
-    transcription() {
+    async transcription(filePath) {
         try {
-
+            const response = await this.openai.createTranscription(
+                createReadStream(filePath),
+                'whisper-1'
+            );
+            return response.data.text;
         } catch (error) {
             console.log('Error while transcription: ', error.message);
 
