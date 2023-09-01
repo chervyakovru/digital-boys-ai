@@ -14,7 +14,7 @@ bot.command('new', async (ctx) => {
     await ctx.reply('Жду вашего голосового или текстового сообщения')
 })
 
-bot.command('new', async (ctx) => {
+bot.command('clear', async (ctx) => {
     ctx.session = getNewSession();
     await ctx.reply('Жду вашего голосового или текстового сообщения')
 })
